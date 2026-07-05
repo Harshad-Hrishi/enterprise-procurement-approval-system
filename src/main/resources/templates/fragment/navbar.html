@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="navbar">
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+
+        <div class="container-fluid">
+
+            <span class="navbar-brand fw-bold">
+                Enterprise Procurement & Approval System
+            </span>
+
+            <div class="ms-auto d-flex align-items-center">
+
+                <span class="me-3">
+
+                    Welcome,
+
+                    <strong th:text="${#authentication.name}">
+                        Admin
+                    </strong>
+
+                </span>
+
+                <a th:href="@{/logout}"
+                   class="btn btn-outline-danger btn-sm">
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</th:block>
+
+</html>

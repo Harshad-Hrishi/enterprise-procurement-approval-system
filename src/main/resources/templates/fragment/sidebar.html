@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="sidebar">
+
+    <div class="sidebar">
+
+        <div class="logo">
+
+            <h3>EPAS</h3>
+
+            <small>Enterprise Procurement</small>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a th:href="@{/dashboard}">
+                    <i class="bi bi-speedometer2"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-people"></i>
+                    Users
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-diagram-3"></i>
+                    Departments
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-person-badge"></i>
+                    Roles
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-box-seam"></i>
+                    Procurement
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-check2-square"></i>
+                    Workflow
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bi bi-bar-chart"></i>
+                    Reports
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</th:block>
+
+</html>
