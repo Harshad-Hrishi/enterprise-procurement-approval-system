@@ -11,6 +11,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
 import java.util.List;
@@ -24,6 +25,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     private final UserRoleRepository userRoleRepository;
     private final RolePermissionRepository rolePermissionRepository;
 
+    @Transactional(readOnly = true)
     @Override
     public UserDetails loadUserByUsername(String email)
             throws UsernameNotFoundException {
